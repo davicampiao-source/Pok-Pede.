@@ -1,0 +1,297 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Seleção de Pokémons</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<div class="box">
+
+    <!-- LOGO E TÍTULO -->
+    <img src="IMG/Pokemon-Logo-PNG-Background-Image.png" alt="Logo" width="150" height="100">
+
+    <h3>PokéPede</h3>
+    <h1>Hora de fazer seu pedido de pokémon!</h1>
+
+    <hr>
+
+    <!-- MENU -->
+    <a href="Pokébolas.html">Comprar Pokébolas</a>
+    <a href="Itens.html">Comprar Itens de batalha</a>
+    <a href="Roupa.html">Poké-Roupas</a>
+
+    <hr>
+
+    <!-- BARRA DE PESQUISA ANIMADA -->
+    <form class="search-box" action="pedido.php" method="GET">
+        <input
+            type="text"
+            name="pesquisa"
+            placeholder=" "
+            aria-label="Pesquisar Pokémon"
+        >
+        <button type="reset" aria-label="Limpar pesquisa"></button>
+    </form>
+
+    <hr>
+
+    <!-- FORMULÁRIO DE COMPRA -->
+    <form action="pedido.php" method="POST">
+
+        <!-- 1. POKÉMON INICIAIS -->
+        <h3>1. Promoção de iniciais POR APENAS (1200R$):</h3>
+
+        <label>
+            <input type="radio" name="inicial" value="Mudkip">
+            Mudkip (Água)
+        </label>
+
+        <label>
+            <input type="radio" name="inicial" value="Treecko">
+            Treecko (Planta)
+        </label>
+
+        <label>
+            <input type="radio" name="inicial" value="Torchic">
+            Torchic (Fogo)
+        </label>
+
+        <br>
+
+        <img src="IMG/mudikp.png" alt="Mudkip" width="100" height="100">
+        <img src="IMG/treecko.png" alt="Treecko" width="100" height="100">
+        <img src="IMG/torchic.png" alt="Torchic" width="50" height="100">
+
+        <br><br>
+
+        <a href="DescMudkip.html">
+            <button type="button">Descobrir mais</button>
+        </a>
+
+        <a href="DescTreecko.html">
+            <button type="button">Descobrir mais</button>
+        </a>
+
+        <a href="DescTorchic.html">
+            <button type="button">Descobrir mais</button>
+        </a>
+
+        <hr>
+
+        <!-- 2. POKÉMON RAROS -->
+        <h3>2. Promoção de pokémons raros POR APENAS (500R$):</h3>
+
+        <label>
+            <input type="checkbox" name="segundo[]" value="Ralts">
+            Ralts (Psíquico)
+        </label>
+
+        <label>
+            <input type="checkbox" name="segundo[]" value="Numel">
+            Numel (Fogo)
+        </label>
+
+        <label>
+            <input type="checkbox" name="segundo[]" value="Aron">
+            Aron (Aço)
+        </label>
+
+        <br>
+
+        <img src="IMG/ralts.png" alt="Ralts" width="50" height="70">
+        <img src="IMG/numel.png" alt="Numel" width="70" height="70">
+        <img src="IMG/aron.png" alt="Aron" width="70" height="70">
+
+        <br>
+
+        <label>
+            <input type="checkbox" name="segundo[]" value="Carvanha">
+            Carvanha (Água)
+        </label>
+
+        <label>
+            <input type="checkbox" name="segundo[]" value="Cacnea">
+            Cacnea (Planta)
+        </label>
+
+        <label>
+            <input type="checkbox" name="segundo[]" value="Slugma">
+            Slugma (Fogo)
+        </label>
+
+        <br>
+
+        <img src="IMG/carvania.png" alt="Carvanha" width="70" height="70">
+        <img src="IMG/cacnea.png" alt="Cacnea" width="70" height="70">
+        <img src="IMG/slugma.png" alt="Slugma" width="70" height="70">
+
+        <hr>
+
+        <!-- 3. POKÉMON VOADORES -->
+        <h3>3. Promoção de pokémons voadores POR APENAS (300R$):</h3>
+
+        <label>
+            <input type="checkbox" name="voador[]" value="Taillow">
+            Taillow (Voador)
+        </label>
+
+        <label>
+            <input type="checkbox" name="voador[]" value="Spearow">
+            Spearow (Voador)
+        </label>
+
+        <label>
+            <input type="checkbox" name="voador[]" value="Swablu">
+            Swablu (Voador)
+        </label>
+
+        <br>
+
+        <img src="IMG/tailow.png" alt="Taillow" width="70" height="70">
+        <img src="IMG/spearow.png" alt="Spearow" width="70" height="70">
+        <img src="IMG/swablu.png" alt="Swablu" width="70" height="70">
+
+        <hr>
+
+        <!-- 4. POKÉMON SHINYS -->
+        <h3>4. Promoção de Pokémons Shinys POR APENAS (10000R$):</h3>
+
+        <label>
+            <input type="checkbox" name="shiny[]" value="Beldum">
+            ✨Beldum (Aço)✨
+        </label>
+
+        <label>
+            <input type="checkbox" name="shiny[]" value="Bagon">
+            ✨Bagon (Dragão)✨
+        </label>
+
+        <label>
+            <input type="checkbox" name="shiny[]" value="Snorunt">
+            ✨Snorunt (Gelo)✨
+        </label>
+
+        <br>
+
+        <img src="IMG/beldum.png" alt="Beldum" width="70" height="70">
+        <img src="IMG/bagon.png" alt="Bagon" width="70" height="70">
+        <img src="IMG/snorunt.png" alt="Snorunt" width="70" height="70">
+
+        <br>
+
+        <a href="DescBeldum.html">
+            <button type="button">Descobrir mais</button>
+        </a>
+
+        <a href="DescBagon.html">
+            <button type="button">Descobrir mais</button>
+        </a>
+
+        <a href="DescSnorunt.html">
+            <button type="button">Descobrir mais</button>
+        </a>
+
+        <hr>
+
+        <!-- OUTROS POKÉMONS -->
+        <h3>Outros Pokémons em estoque:</h3>
+
+        <select name="eléticos">
+            <option value="Nenhum">Nenhum</option>
+            <option value="Pikachu">Pikachu (Elétrico)</option>
+            <option value="Mareep">Mareep (Elétrico)</option>
+            <option value="Shinx">Shinx (Elétrico)</option>
+            <option value="Electrike">Electrike (Elétrico)</option>
+            <option value="Magnemite">Magnemite (Elétrico/Aço)</option>
+            <option value="Voltorb">Voltorb (Elétrico)</option>
+            <option value="Pachirisu">Pachirisu (Elétrico)</option>
+            <option value="Emolga">Emolga (Elétrico/Voador)</option>
+            <option value="Yamper">Yamper (Elétrico)</option>
+            <option value="Toxel">Toxel (Elétrico/Veneno)</option>
+        </select>
+
+        <select name="pedra">
+            <option value="Nenhum">Nenhum</option>
+            <option value="Geodude">Geodude (Pedra/Terra)</option>
+            <option value="Onix">Onix (Pedra/Terra)</option>
+            <option value="Roggenrola">Roggenrola (Pedra)</option>
+            <option value="Nosepass">Nosepass (Pedra)</option>
+            <option value="Aron">Aron (Aço/Pedra)</option>
+            <option value="Rhyhorn">Rhyhorn (Terra/Pedra)</option>
+            <option value="Larvitar">Larvitar (Pedra/Terra)</option>
+            <option value="Rockruff">Rockruff (Pedra)</option>
+            <option value="Dwebble">Dwebble (Inseto/Pedra)</option>
+            <option value="Tyrunt">Tyrunt (Pedra/Dragão)</option>
+        </select>
+
+        <select name="fogo">
+            <option value="Nenhum">Nenhum</option>
+            <option value="Charmander">Charmander (Fogo)</option>
+            <option value="Vulpix">Vulpix (Fogo)</option>
+            <option value="Growlithe">Growlithe (Fogo)</option>
+            <option value="Ponyta">Ponyta (Fogo)</option>
+            <option value="Slugma">Slugma (Fogo)</option>
+            <option value="Numel">Numel (Fogo/Terra)</option>
+            <option value="Houndour">Houndour (Noturno/Fogo)</option>
+            <option value="Fennekin">Fennekin (Fogo)</option>
+            <option value="Litten">Litten (Fogo)</option>
+            <option value="Scorbunny">Scorbunny (Fogo)</option>
+        </select>
+
+        <select name="fantasma">
+            <option value="Nenhum">Nenhum</option>
+            <option value="Gastly">Gastly (Fantasma/Veneno)</option>
+            <option value="Shuppet">Shuppet (Fantasma)</option>
+            <option value="Duskull">Duskull (Fantasma)</option>
+            <option value="Misdreavus">Misdreavus (Fantasma)</option>
+            <option value="Phantump">Phantump (Fantasma/Planta)</option>
+        </select>
+
+        <select name="fada">
+            <option value="Nenhum">Nenhum</option>
+            <option value="Clefairy">Clefairy (Fada)</option>
+            <option value="Ralts">Ralts (Psíquico/Fada)</option>
+            <option value="Tinkatink">Tinkatink (Fada/Aço)</option>
+        </select>
+
+        <br><br>
+
+        <h4>Para pedir pokémons em estoque entre em contato conosco!</h4>
+
+        <hr>
+
+        <button type="submit">Finalizar compra</button>
+
+    </form>
+
+    <hr>
+
+    <!-- RODAPÉ -->
+    <footer>
+
+        <p>&copy; 2026 Loja de Pokémons. Todos os direitos reservados.</p>
+
+        <h6>
+            Contato: (11) 1234-5678
+            Email: contato@lojapokemons.com
+            Endereço: Rua dos Pokémons, 123 - Cidade de Pallet
+            Redes:
+
+            <a href="https://www.facebook.com/lojapokemons" target="_blank">Facebook</a> |
+
+            <a href="https://www.instagram.com/lojapokemons" target="_blank">Instagram</a> |
+
+            <a href="https://www.twitter.com/lojapokemons" target="_blank">Twitter</a>
+        </h6>
+
+    </footer>
+
+</div>
+
+</body>
+</html>

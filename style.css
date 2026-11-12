@@ -1,0 +1,913 @@
+/* ============================= */
+/* CONFIGURAÇÕES GERAIS */
+/* ============================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background: #eef2f8;
+    color: #292929;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+}
+
+.box {
+    max-width: 1100px;
+    margin: 30px auto;
+    padding: 25px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 5px 25px #00000018;
+    text-align: center;
+}
+
+/* LOGO */
+
+.box > img {
+    object-fit: contain;
+    max-width: 100%;
+}
+
+/* NOME DA LOJA */
+
+.box > h3 {
+    color: #2056a1;
+    font-size: 28px;
+    margin: 5px;
+}
+
+/* TÍTULO PRINCIPAL */
+
+h1 {
+    color: #2056a1;
+    font-size: 32px;
+    margin: 20px 0;
+}
+
+/* SUBTÍTULOS */
+
+h3 {
+    color: #2056a1;
+    font-size: 21px;
+    margin-top: 25px;
+}
+
+/* LINHAS */
+
+hr {
+    border: none;
+    height: 3px;
+    background: linear-gradient(
+        to right,
+        #ffcb05,
+        #e63946,
+        #2056a1
+    );
+    margin: 25px 0;
+    border-radius: 5px;
+}
+
+/* ============================= */
+/* LINKS */
+/* ============================= */
+
+a {
+    color: #2056a1;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+a:hover {
+    color: #e63946;
+}
+
+/* MENU */
+
+.box > a {
+    display: inline-block;
+    background: #2056a1;
+    color: white;
+    padding: 13px 22px;
+    margin: 7px;
+    border-radius: 25px;
+    transition: 0.3s;
+}
+
+.box > a:hover {
+    background: #ffcb05;
+    color: #222;
+    transform: translateY(-3px);
+}
+
+/* ============================= */
+/* BARRA DE PESQUISA ANIMADA */
+/* ============================= */
+
+.box form.search-box {
+    display: inline-block;
+    position: relative;
+    width: auto;
+    padding: 0;
+    margin: 20px auto;
+    background: white;
+    border: 3px solid #2056a1;
+    border-radius: 50px;
+    box-shadow: 0 4px 12px #00000015;
+    text-align: left;
+}
+
+/* CAMPO DE PESQUISA */
+
+.box form.search-box input[type="text"] {
+    display: block;
+    width: 45px;
+    height: 45px;
+    padding: 10px 45px 10px 15px;
+    border: none;
+    border-radius: 50px;
+    background: white;
+    color: #2056a1;
+    font-size: 15px;
+    font-weight: bold;
+    box-sizing: border-box;
+    transition: width 0.8s cubic-bezier(
+        0.68, -0.55, 0.27, 1.55
+    );
+}
+
+.box form.search-box input[type="text"]:focus {
+    outline: none;
+}
+
+/* EXPANSÃO DA PESQUISA */
+
+.box form.search-box input[type="text"]:focus,
+.box form.search-box input[type="text"]:not(:placeholder-shown) {
+    width: 300px;
+}
+
+/* BOTÃO DE LIMPAR */
+
+.box form.search-box button[type="reset"] {
+    position: absolute;
+    top: 11px;
+    right: 12px;
+    width: 20px;
+    height: 20px;
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    cursor: pointer;
+    transform: rotate(-45deg) translateY(30px);
+    opacity: 0;
+    transition: 0.3s;
+}
+
+/* APARECER O BOTÃO */
+
+.box form.search-box input[type="text"]:focus
++ button[type="reset"],
+.box form.search-box input[type="text"]:not(:placeholder-shown)
++ button[type="reset"] {
+    transform: rotate(-45deg) translateY(0);
+    opacity: 1;
+}
+
+/* DESENHO DO X */
+
+.box form.search-box button[type="reset"]::before,
+.box form.search-box button[type="reset"]::after {
+    content: "";
+    position: absolute;
+    background: #e63946;
+    width: 4px;
+    height: 20px;
+    border-radius: 5px;
+}
+
+.box form.search-box button[type="reset"]::after {
+    transform: rotate(90deg);
+}
+
+/* EFEITO DO BOTÃO */
+
+.box form.search-box button[type="reset"]:hover {
+    background: transparent;
+    transform: rotate(45deg);
+}
+
+/* ============================= */
+/* FORMULÁRIO DE COMPRA */
+/* ============================= */
+
+.box form:not(.search-box) {
+    background: #f7f9fd;
+    padding: 25px;
+    margin: 20px auto;
+    border: 2px solid #e0e7f2;
+    border-radius: 15px;
+    text-align: center;
+}
+
+/* OPÇÕES DOS POKÉMONS */
+
+label {
+    display: inline-block;
+    background: white;
+    padding: 10px;
+    margin: 6px;
+    border: 1px solid #dce3ed;
+    border-radius: 10px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+label:hover {
+    border-color: #ffcb05;
+    background: #fff9df;
+}
+
+/* IMAGENS DOS POKÉMONS */
+
+.box img:not(:first-child) {
+    object-fit: contain;
+    vertical-align: middle;
+    margin: 8px;
+    transition: 0.3s;
+}
+
+.box img:hover {
+    transform: scale(1.12);
+}
+
+/* ============================= */
+/* BOTÕES */
+/* ============================= */
+
+button {
+    background: #e63946;
+    color: white;
+    padding: 12px 20px;
+    margin: 8px;
+    border: none;
+    border-radius: 25px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+button:hover {
+    background: #b51e2b;
+    transform: scale(1.05);
+}
+
+/* FINALIZAR COMPRA */
+
+button[type="submit"] {
+    background: #ffcb05;
+    color: #222;
+    font-size: 18px;
+    padding: 15px 35px;
+}
+
+button[type="submit"]:hover {
+    background: #e6b500;
+}
+
+/* ============================= */
+/* LISTAS DE ESTOQUE */
+/* ============================= */
+
+select {
+    background: white;
+    color: #333;
+    padding: 12px;
+    margin: 8px;
+    border: 2px solid #2056a1;
+    border-radius: 8px;
+    font-size: 14px;
+    cursor: pointer;
+    max-width: 100%;
+}
+
+select:focus {
+    outline: 2px solid #ffcb05;
+}
+
+/* TEXTO DE CONTATO */
+
+h4 {
+    color: #2056a1;
+    font-size: 18px;
+    margin-top: 25px;
+}
+
+/* ============================= */
+/* RODAPÉ */
+/* ============================= */
+
+footer {
+    background: #173b70;
+    color: white;
+    padding: 20px;
+    margin-top: 30px;
+    border-radius: 12px;
+}
+
+footer p {
+    font-size: 15px;
+}
+
+footer h6 {
+    font-size: 13px;
+    line-height: 2;
+    font-weight: normal;
+}
+
+footer a {
+    color: #ffcb05;
+}
+
+footer a:hover {
+    color: white;
+}
+
+/* ============================= */
+/* ITENS DE BATALHA */
+/* ============================= */
+
+.itens-batalha {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.item {
+    background: #f7f9ff;
+    border: 2px solid #dce5f5;
+    border-radius: 15px;
+    padding: 22px 15px;
+    box-shadow: 0 4px 10px #00000010;
+    transition: 0.3s;
+}
+
+.item:hover {
+    transform: translateY(-7px);
+    border-color: #ffcb05;
+    box-shadow: 0 8px 18px #00000020;
+    background: white;
+}
+
+.item h3 {
+    color: #2056a1;
+    font-size: 21px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+
+.item p {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 45px;
+}
+
+.item span {
+    display: block;
+    color: #168443;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 18px 0;
+}
+
+.item button {
+    background: #e63946;
+    color: white;
+    width: 90%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.item button:hover {
+    background: #ffcb05;
+    color: #222222;
+    transform: scale(1.05);
+}
+
+.itens-batalha hr {
+    display: none;
+}
+
+/* ============================= */
+/* POKÉBOLAS */
+/* ============================= */
+
+.pokebolas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.pokebola {
+    background: linear-gradient(
+        145deg,
+        #ffffff,
+        #f3f6fc
+    );
+    border: 2px solid #dce3ed;
+    border-radius: 16px;
+    padding: 22px 15px;
+    box-shadow: 0 4px 12px #00000012;
+    transition: 0.3s;
+}
+
+.pokebola:hover {
+    transform: translateY(-8px);
+    border-color: #e63946;
+    box-shadow: 0 8px 20px #e6394630;
+    background: white;
+}
+
+.pokebola h3 {
+    color: #2056a1;
+    font-size: 21px;
+    margin-top: 5px;
+    margin-bottom: 12px;
+}
+
+.pokebola p {
+    color: #555555;
+    font-size: 14px;
+    line-height: 1.6;
+    min-height: 45px;
+}
+
+.pokebola span {
+    display: block;
+    color: #168443;
+    font-size: 23px;
+    font-weight: bold;
+    margin: 18px 0;
+}
+
+.pokebola button {
+    background: #e63946;
+    color: white;
+    width: 90%;
+    padding: 12px;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.pokebola button:hover {
+    background: #ffcb05;
+    color: #222222;
+    transform: scale(1.06);
+}
+
+.pokebolas hr {
+    display: none;
+}
+
+/* ============================= */
+/* ACESSÓRIOS POKÉMON */
+/* ============================= */
+
+.acessorios-pokemon {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+    padding: 30px 10px;
+    background: linear-gradient(
+        135deg,
+        #f1eaff,
+        #e6f3ff
+    );
+    border-radius: 20px;
+}
+
+.acessorio {
+    background: white;
+    border-radius: 20px;
+    overflow: hidden;
+    text-align: center;
+    border: 1px solid #f5d4d4;
+    box-shadow: 0 5px 15px #5c43851a;
+    transition: 0.4s;
+    padding-bottom: 22px;
+}
+
+.acessorio:hover {
+    transform: translateY(-10px) rotate(1deg);
+    box-shadow: 0 12px 25px #b5525244;
+    border-color: #d86868;
+}
+
+.acessorio img {
+    width: 100%;
+    height: 210px;
+    object-fit: contain;
+    padding: 18px;
+    background: linear-gradient(
+        135deg,
+        #ffe5e5,
+        #f8d7d7
+    );
+    transition: 0.4s;
+}
+
+.acessorio:hover img {
+    transform: scale(1.08);
+}
+
+.acessorio h3 {
+    color: #e63946;
+    font-size: 20px;
+    margin: 18px 10px 10px;
+}
+
+.acessorio p {
+    color: #666666;
+    font-size: 14px;
+    line-height: 1.6;
+    padding: 0 15px;
+    min-height: 45px;
+}
+
+.acessorio span {
+    display: inline-block;
+    background: #ffe5e5;
+    color: #a54343;
+    font-size: 22px;
+    font-weight: bold;
+    padding: 9px 20px;
+    margin: 12px;
+    border-radius: 30px;
+}
+
+.acessorio button {
+    display: block;
+    width: 80%;
+    margin: 10px auto;
+    padding: 13px;
+    background: linear-gradient(
+        90deg,
+        #8b3232,
+        #b35252
+    );
+    color: white;
+    border: none;
+    border-radius: 30px;
+    font-size: 15px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.acessorio button:hover {
+    background: linear-gradient(
+        90deg,
+        #8b3232,
+        #b35252
+    );
+    transform: scale(1.06);
+    box-shadow: 0 4px 12px #65131366;
+}
+
+.acessorios-pokemon hr {
+    display: none;
+}
+
+/* TÍTULO DA PÁGINA DE ROUPAS */
+
+.box > h1 {
+    color: #2056a1;
+    margin: 25px 0;
+    font-size: 30px;
+}
+
+/* BOTÃO VOLTAR */
+
+.box > a button {
+    background: #6d3f3f;
+    color: white;
+    padding: 13px 35px;
+    border-radius: 30px;
+}
+
+.box > a button:hover {
+    background: #d86868;
+}
+
+/* ============================= */
+/* RESPONSIVIDADE */
+/* ============================= */
+
+/* TABLETS */
+
+@media (max-width: 850px) {
+    .itens-batalha,
+    .pokebolas,
+    .acessorios-pokemon {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+/* CELULARES */
+
+@media (max-width: 600px) {
+    .box {
+        margin: 10px;
+        padding: 12px;
+    }
+
+    h1 {
+        font-size: 24px;
+    }
+
+    h3 {
+        font-size: 18px;
+    }
+
+    .box form:not(.search-box) {
+        padding: 12px;
+    }
+
+    label {
+        display: inline-block;
+        font-size: 13px;
+        padding: 8px;
+    }
+
+    select {
+        width: 100%;
+        margin: 6px 0;
+    }
+
+    footer {
+        padding: 12px;
+    }
+
+    footer h6 {
+        font-size: 12px;
+    }
+
+    .itens-batalha,
+    .pokebolas,
+    .acessorios-pokemon {
+        grid-template-columns: 1fr;
+        gap: 15px;
+    }
+
+    .item,
+    .pokebola {
+        padding: 20px;
+    }
+
+    .item h3,
+    .pokebola h3 {
+        font-size: 19px;
+    }
+
+    .item span,
+    .pokebola span {
+        font-size: 21px;
+    }
+
+    .acessorios-pokemon {
+        padding: 15px;
+        gap: 20px;
+    }
+
+    .acessorio img {
+        height: 230px;
+    }
+
+    .acessorio h3 {
+        font-size: 19px;
+    }
+
+    .box > h1 {
+        font-size: 23px;
+    }
+
+    /* PESQUISA NO CELULAR */
+
+    .box form.search-box input[type="text"]:focus,
+    .box form.search-box input[type="text"]:not(:placeholder-shown) {
+        width: 65vw;
+        max-width: 300px;
+    }
+}
+
+/* ===================================== */
+/* LOGIN E CADASTRO - POKÉPEDE */
+/* ===================================== */
+
+/* Fundo especial das telas de login e cadastro */
+
+body:has(.auth-container) {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    background: linear-gradient(135deg, #e63946, #ff7777, #ffcccc);
+}
+
+/* Caixa principal */
+
+.auth-container {
+    width: 100%;
+    max-width: 430px;
+    margin: 30px auto;
+    padding: 35px;
+    background: white;
+    border: 2px solid #e63946;
+    border-radius: 20px;
+    text-align: center;
+    box-shadow: 0 8px 25px #00000030;
+}
+
+/* Logo */
+
+.auth-container .logo {
+    display: block;
+    width: 160px;
+    height: 100px;
+    max-width: 100%;
+    object-fit: contain;
+    margin: 0 auto 15px;
+}
+
+/* Título e descrição */
+
+.auth-container h1 {
+    color: #2056a1;
+    font-size: 26px;
+    margin: 10px 0;
+}
+
+.auth-container > p {
+    color: #555;
+    font-size: 14px;
+    margin: 12px 0 20px;
+}
+
+/* Formulários */
+
+.auth-container form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin: 20px 0 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    text-align: left;
+}
+
+.auth-container form label {
+    display: block;
+    margin: 5px 0 0;
+    padding: 0;
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    color: #333;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+.auth-container form label:hover {
+    background: transparent;
+    border-color: transparent;
+}
+
+/* Campos de preenchimento */
+
+.auth-container input {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    margin: 0;
+    border: 2px solid #ddd;
+    border-radius: 8px;
+    background: white;
+    color: #292929;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.auth-container input:focus {
+    border-color: #2056a1;
+    box-shadow: 0 0 5px #2056a133;
+}
+
+/* Botão de login e cadastro */
+
+.auth-container form button,
+.auth-container form button[type="button"] {
+    width: 100%;
+    margin: 12px 0 0;
+    padding: 14px;
+    background: #e63946;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.auth-container form button:hover {
+    background: #b51e2b;
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Links */
+
+.auth-container a {
+    color: #2056a1;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.auth-container a:hover {
+    color: #e63946;
+    text-decoration: underline;
+}
+
+.auth-container .forgot-password {
+    display: block;
+    margin-top: 2px;
+    color: #2056a1;
+    font-size: 13px;
+    text-align: right;
+}
+
+.auth-container .account-text {
+    margin: 22px 0 8px;
+    color: #555;
+}
+
+.auth-container .auth-link {
+    display: inline-block;
+    margin-top: 2px;
+}
+
+.auth-container .back-link {
+    display: block;
+    margin-top: 25px;
+    color: #666;
+    font-size: 13px;
+    font-weight: normal;
+}
+
+/* Responsividade do login e cadastro */
+
+@media (max-width: 480px) {
+    body:has(.auth-container) {
+        padding: 12px;
+    }
+
+    .auth-container {
+        margin: 15px auto;
+        padding: 25px 20px;
+    }
+
+    .auth-container h1 {
+        font-size: 22px;
+    }
+
+    .auth-container .logo {
+        width: 140px;
+    }
+}
